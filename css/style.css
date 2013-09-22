@@ -1,0 +1,38 @@
+body{
+	font-family:helvetica, arial,sans-serif;
+}
+
+nav.li{
+	text-decoration:none;
+	float:left;
+}
+
+
+@media screen and (min-width: 22em) {
+
+	body{
+		margin:0 1em;
+		font-size: 1.2em;
+	#	background-color:blue;
+	}
+
+}
+
+@media screen and (min-width: 34em) {
+	
+	body{
+	    font-size: 1em;
+		margin:0 1em;
+	#	background-color:red;
+	}
+
+}
+
+@media screen and (min-width: 51em) {
+   body {
+      max-width: 49em;
+	  margin:0 auto;
+#	  background-color:green;
+   }
+
+}
