@@ -7,39 +7,55 @@
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
         <link rel="shortcut icon" href="favicon.ico" />
-        
-        <!--[if lt IE 9]>
-        	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-        <![endif]-->
+        <!--[if IE]>
+              <link href="/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+          <![endif]-->
 
         <link href="css/style.css" rel="stylesheet">
-        <script src="js/lib/modernizr.js"></script>
+
+        <script data-main="js/app" src="js/lib/require.js"></script>
+        
 
     </head>
   <body>
       
       <header class="index">
           <h1>Green Kite Ceilidh band</h1>
-          <a class="menu-icon" href="#">&#9776;</a>
-          <nav>
-              <ul class="links primary-links">
-                  <li class="menu-1841 active-trail first active"><a href="/" title="Home Page" class="active">home</a></li> 
-                  <li class="menu-1709"><a href="/?q=news" title="News">news</a></li> 
-                  <li class="menu-416"><a href="/?q=gigs" title="Gigs">gigs</a></li> 
-                  <li class="menu-673"><a href="/?q=node/124" title="Audio">audio</a></li> 
-                  <li class="menu-160"><a href="/?q=about" title="About">about</a></li> 
-                  <li class="menu-1845"><a href="/?q=node/38819" title="">FAQ</a></li> 
-                  <li class="menu-332"><a href="/?q=contact" title="Contacts">contacts</a></li> 
-                  <li class="menu-1803"><a href="/?q=node/110" title="Photos">photos</a></li> 
-                  <li class="menu-1844 last"><a href="/?q=node/131" title="videos">videos</a></li>
-              </ul>
-          </nav>
+          <a id="menu-icon" href="#nav">&#9776;</a>
       </header>
       
       <div id="main" role="main">
-          <h1>Mofoing Header</h1>
-          <p>This is a test piece of content, this is gonna be really really wide ... I'll see what happens</p>
+          <section class="content">
+              <h1>Mofoing Header</h1>
+              <p>This is a test piece of content, this is gonna be really really wide ... I'll see what happens</p>
+              <p>This is a test piece of content, this is gonna be really really wide ... I'll see what happens</p>
+              <p>This is a test piece of content, this is gonna be really really wide ... I'll see what happens</p>
+              <p>This is a test piece of content, this is gonna be really really wide ... I'll see what happens</p>
+              <p>This is a test piece of content, this is gonna be really really wide ... I'll see what happens</p>
+              <p>This is a test piece of content, this is gonna be really really wide ... I'll see what happens</p>
+          </section>
+          <section class="supporting-content">
+              <h1>Mofoing Header</h1>
+              <p>This is a test piece of content, this is gonna be really really wide ... I'll see what happens</p>
+              <p>This is a test piece of content, this is gonna be really really wide ... I'll see what happens</p>
+              <p>This is a test piece of content, this is gonna be really really wide ... I'll see what happens</p>
+              <p>This is a test piece of content, this is gonna be really really wide ... I'll see what happens</p>
+          </section>
       </div>
-
+      
+      <nav id="main_nav">
+          <a name="nav" onclick="return false;"></a>
+          <ul class="links primary-links">
+              <li class="menu-1841 active-trail first active"><a href="/" title="Home Page" class="active">home</a></li> 
+              <li class="menu-1709"><a href="/?q=news" title="News">news</a></li> 
+              <li class="menu-416"><a href="/?q=gigs" title="Gigs">gigs</a></li> 
+              <li class="menu-673"><a href="/?q=node/124" title="Audio">audio</a></li> 
+              <li class="menu-160"><a href="/?q=about" title="About">about</a></li> 
+              <li class="menu-1845"><a href="/?q=node/38819" title="">FAQ</a></li> 
+              <li class="menu-332"><a href="/?q=contact" title="Contacts">contacts</a></li> 
+              <li class="menu-1803"><a href="/?q=node/110" title="Photos">photos</a></li> 
+              <li class="menu-1844 last"><a href="/?q=node/131" title="videos">videos</a></li>
+          </ul>
+      </nav>
   </body>
 </html>
