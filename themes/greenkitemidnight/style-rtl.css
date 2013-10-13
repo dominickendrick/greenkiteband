@@ -1,0 +1,401 @@
+/* $Id: style-rtl.css,v 1.6 2007/12/17 15:05:10 goba Exp $ */
+
+html {
+  direction: rtl;
+}
+
+/**
+ * Generic elements
+ */
+body, #squeeze div.node {
+  direction: rtl;
+}
+
+#squeeze div.node, #squeeze div.block, #squeeze div.print, #squeeze div.panel-flexible  {
+	text-align:right;
+	direction:rtl;
+}
+
+div.media_content, div.media_meta {
+	float:right;
+}
+
+div.media_meta {
+	padding:0 10px 0 0;
+}
+
+#squeeze div.print img{
+	float:right;
+	margin-left:3px;
+}
+
+ol li, ul li {
+  margin: 0.4em .5em 0.4em 0;
+}
+
+ul.menu, .item-list ul {
+  margin: 0.35em -0.5em 0 0;
+}
+
+ul.menu ul, .item-list ul ul {
+  margin-left: 0;
+  margin-right: 0em;
+}
+
+ol li, ul li, ul.menu li, .item-list ul li, li.leaf {
+  margin: 0.15em .5em 0.15em 0;
+}
+
+ul li, ul.menu li, .item-list ul li, li.leaf {
+  padding: 0 1.5em .2em 0;
+
+}
+
+#squeeze .block-aggregator ul{
+	margin:0;
+}
+#squeeze .block-aggregator ul li {
+	padding:0;
+	float:right;
+	margin:0.15em 0 0.15em 0.5em;
+}
+
+#squeeze .block-aggregator li img {
+	float:right;
+	margin:0 0 0 10px;
+}
+
+ol li {
+  margin-left: 0;
+  margin-right: 2em;
+}
+
+ul li.expanded {
+
+}
+
+ul li.collapsed {
+
+}
+
+ul.inline li {
+  padding: 0 0 0 1em;
+}
+
+ol.task-list {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+ol.task-list li {
+  padding: 0.5em 2em 0.5em 1em;
+}
+
+ol.task-list li.active {
+  abackground: transparent url(images/task-list.png) no-repeat 97px 50%;
+}
+
+ol.task-list li.done {
+  abackground: transparent url(../../misc/watchdog-ok.png) no-repeat 100% 50%;
+}
+
+ol.task-list li.active {
+  margin-right: 0;
+  margin-left: 1em;
+}
+
+dl {
+  margin: 0.5em 1.5em 1em 0;
+}
+
+dl dt {
+}
+
+dl dd {
+  margin: 0 1.5em .5em 0;
+}
+
+.form-button, .form-submit {
+  margin: 2em 0 1em 0.5em;
+}
+
+#header-region h2 {
+  margin: 0 0 0 1em;
+}
+
+
+#squeeze h1.title {
+
+	direction:rtl;
+	text-align:right;
+}
+
+#wrapper #container #header h1 img {
+  padding-right: 0;
+  padding-left: 20px;
+  float: right;
+}
+
+#sidebar-left .block-region {
+  margin: 0 0 0 15px;
+}
+
+#sidebar-right .block-region {
+  margin: 0 15px 0px 0;
+}
+
+/* Now we add the backgrounds for the main content shading */
+#wrapper #container #center #squeeze {
+  background: #fff url("images/bg-content.png") repeat-x 50% 0;
+}
+
+#wrapper #container .breadcrumb {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  right: 35px;
+  z-index: 3;
+}
+
+/**
+ * Primary navigation
+ */
+
+
+#primary ul.menu li, .breadcrumb ul.menu li {
+
+  padding:0;
+  margin:0;
+}
+
+.breadcrumb ul.menu li {
+	float:left;
+}
+/**
+ * Secondary navigation
+ */
+#primary ul.secondary-links {
+  float: left;
+  clear: left;
+}
+
+#primary ul.secondary-links li {
+  float: right;
+}
+
+#primary ul.primary {
+  float: right;
+}
+#primary ul.secondary {
+  clear: both;
+  text-align: right;
+}
+h2.with-tabs {
+  float: right;
+  margin: 0 0 0 2em;
+}
+
+ul.primary li a, ul.primary li.active a, ul.primary li a:hover, ul.primary li a:visited,
+ul.secondary li a, ul.secondary li.active a, ul.secondary li a:hover, ul.secondary li a:visited {
+  margin: 0 1px 0 0;
+
+}
+ul.primary li a:after {
+  /* Fix Firefox 2 RTL bug. */
+  content: " ";
+}
+
+ul.links li, ul.inline li {
+  padding-left: 1em;
+  padding-right: 0;
+}
+
+.node .links, .comment .links {
+  text-align: right;
+}
+
+.node .links ul.links li, .comment .links ul.links li {}
+.terms ul.links li {
+  padding-right: 1em;
+  padding-left: 0;
+}
+
+.picture, .comment .submitted {
+  padding-left: 0;
+  float: left;
+  clear: left;
+  padding-right: 1em;
+}
+
+.new {
+  float: left;
+}
+
+.terms {
+  float: left;
+}
+
+.indented {
+  margin-left: 0;
+  margin-right: 25px;
+}
+
+html.js fieldset.collapsible legend a {
+  padding-left: 0;
+  padding-right: 2em;
+  abackground: url("images/menu-expanded.gif") no-repeat 100% 50%;
+}
+
+html.js fieldset.collapsed legend a {
+  abackground: url("images/menu-collapsed-rtl.gif") no-repeat 100% 50%;
+}
+
+/**
+ * Syndication Block
+ */
+#block-node-0 h2 {
+  float: right;
+  padding-right: 0;
+  padding-left: 20px;
+}
+
+#block-node-0 img {
+  float: left;
+}
+
+#block-node-0 .content {
+  clear: left;
+}
+
+/**
+ * Login Block
+ */
+#user-login-form ul {
+  text-align: right;
+}
+
+div.admin .left {
+  float: right;
+}
+
+div.admin .right {
+  float: left;
+}
+
+/* Fix Opera, IE6 and IE7 header width */
+#wrapper #container #header {
+  position: relative;
+  width: 100%;
+}
+
+#wrapper #container #header #logo-floater {
+  width: 100%;
+  left: 0;
+  top:0;
+}
+
+/**
+ * Fixes for IE7 - Does not break other browsers
+ */
+
+/* Position:relative on these breaks IE7. */
+ul.primary li a, ul.primary li.active a, ul.primary li a:hover, ul.primary li a:visited,
+ul.secondary li a, ul.secondary li.active a, ul.secondary li a:hover, ul.secondary li a:visited {
+  position: static;
+}
+
+/* Fix right and left cloumns position breaking on window resize */
+#container {
+  position: relative;
+}
+
+#center {
+  position: relative;
+}
+
+#sidebar-right{
+  position: absolute;
+  right: 0;
+}
+
+/**
+ * Apply hasLayout to elements in IE7, using standard property "min-height"
+ * (see http://www.satzansatz.de/cssd/onhavinglayout.html)
+ */
+
+/* Fix background bleed in center column. */
+#squeeze,
+#squeeze .right-corner {
+  min-height: 1%;
+}
+
+#squeeze .block h2.title {
+	padding:4px 8px 0 0;
+}
+
+ul li.download a, li.download a {
+	background:transparent url(images/audio-download-icon-small.png) no-repeat scroll right top;
+	padding:0 20px 8px 0;
+ 
+}
+
+img.overlay {
+float:left;
+left:-15px;
+margin:5px;
+padding:3px;
+position:absolute;
+top:5px;
+z-index:5;
+}
+
+.quicktabs_main .views-row-odd, .quicktabs_main .views-row-even, .views-field-field-image-main-fid {
+	float:right;
+	padding:10px 10px 0 0;
+}
+
+ul.quicktabs_tabs li {
+	float:right;
+	margin:0;
+}
+
+#sidebar-first ul.menu {
+	text-align:left;
+}
+
+table.views-table {
+margin-right:20px;
+}
+
+table.views-table td.views-field-title {
+background:transparent url(images/audio_overlay_noplay.png) no-repeat scroll 98% center;
+}
+table.views-table .views-field-title {
+padding-right:50px;
+width:60%;
+}
+
+ul.spoke li img {
+	float:right;
+	margin:0 0 0 10px;
+}
+
+div.inline-image {
+	margin-left:10px;
+	display:inline;
+}
+
+ul.pdf li, ul.files li, li.pdf, li.download, li.dl_nologo {
+	margin:0;
+}
+
+div.inline-links a {
+
+ float:right;
+
+}
+
+div.inline-links a.view {
+	float:left;
+}
+
