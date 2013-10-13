@@ -4,5 +4,7 @@ define(function () {
     {
         require(["lib/match.media.js"]);
     }
+
 	return function () {}
+
 });

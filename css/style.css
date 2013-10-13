@@ -31,6 +31,16 @@ footer, header, hgroup, menu, nav, section {
 
 /* end reset */
 
+/*
+
+todo:
+jasmine tests
+amd
+less/sass
+images
+drupal integration
+
+*/
 body {
 	line-height: 1;
 }
@@ -86,7 +96,8 @@ nav li a{
 
 div#main{
 	background-color:#fff;
-	padding:1em;
+	padding:0em 1em 2em 1em;
+	margin-bottom:2em;
 	float:left;
 }
 
@@ -103,16 +114,14 @@ div#main{
 	border-radius: 4px; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
 }
 
-@font-face {
-	font-family: 'entypo';
-	src: url('entypo.woff') format('woff'),
-   		 url('entypo.ttf') format('truetype');
-}
-
 h1{
     font-weight: bold; 
     font-style: normal;
 	font-size:2em;
+}
+
+#main h1{
+	margin:1em 0 1.2em 0;
 }
 
 
@@ -134,7 +143,7 @@ h1{
 	
 }
 
-@media screen and (min-width: 39em) {
+@media screen and (min-width: 40em) {
 	
 	body{
 	    font-size: 1em;

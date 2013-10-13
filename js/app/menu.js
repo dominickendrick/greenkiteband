@@ -1,34 +1,40 @@
-define(['jquery'], function ( $ ) {
-	
+define(['jquery','enquire','polyfil'], function ( $ , enquire, polyfil ) {
 
+	var menu = {
 	
-	var nav = $('#main_nav');
-	var menu_icon = $('#menu-icon');
-	
-	nav.insertBefore("#main");
+		init: function(){
 
-	//call menu visibility on load
-	menu_visibility();
-	
-	$( window ).resize(function() {
-		menu_visibility();
-	});
-	
-	$('#menu-icon').click(function(){
-		nav.slideToggle( "fast" );
-		return false;
-	});
-	
-	
-	function menu_visibility(){
+			//get navigation item and menu icon	
+			var nav = $('#main_nav');
+			var menu_icon = $('#menu-icon');
+			var main = "#main";
+
+			//move nav in the DOM
+			nav.insertBefore(main);
+
+			enquire.register("screen and (min-width: 40em)",{
 		
-		if(menu_icon.is(':visible')){
-			nav.hide();	
-		} else {
-			nav.show();
+				match : function(){
+					nav.show();	
+				},
+		
+				unmatch : function(){
+					nav.hide();
+				}
+		
+			});
+	
+			menu_icon.click(function(){
+				nav.slideToggle( "fast" );
+				return false;
+			});
 		}
-		
-	}	
-    //Define the module value by returning a value.
-    return function () {}
+	}
+    
+	menu.init();
+	
+	//Define the module value by returning a value.
+    return function () {
+	}
+
 });
