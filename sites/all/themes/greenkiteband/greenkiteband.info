@@ -1,0 +1,11 @@
+; $Id: air09.info,v 1.5 2007/07/01 23:27:32 dominickendrick Exp $
+name = Green Kite Band theme
+description = responsive theme
+version = VERSION
+core = 6.x
+engine = phptemplate
+; Information added by drupal.org packaging script on 2009-02-25
+version = "6.11"
+project = "drupal"
+datestamp = "1235596218"
+

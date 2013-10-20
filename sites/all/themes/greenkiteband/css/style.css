@@ -1,0 +1,305 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+/* end reset */
+
+/*
+
+todo:
+jasmine tests
+amd
+less/sass
+images
+drupal integration
+
+*/
+
+@font-face {
+  font-family: 'entypo';
+  font-style: normal;
+  font-weight: 400;
+  src: local('entypo'), url("../font/entypo.woff") format('woff');
+}
+
+
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body{
+	font-family:helvetica, arial,sans-serif;
+	background-color:#000;
+	position:relative;
+	font-size:1rem;
+}
+
+div{
+	font-size:12px; font-size:0.9rem;
+}
+p{
+	font-size:12px; font-size:0.9rem;
+	padding:0.5em 0em 0.5em 0em;
+}
+nav {
+	width:100%;
+	background: #8cdd71;
+	float:left;
+}
+nav ul.links{
+	margin:0;
+	padding:0;
+}
+
+nav li.links{
+	text-decoration:none;
+	list-style:none;
+	padding:.4em .5em;
+	text-align:right;
+	float:left;
+}
+
+
+
+nav li a{
+	color:#fff;
+	text-decoration:none;
+	font-size:1.1em;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+
+}
+
+ul.links li {
+  padding:auto;
+}
+
+div#main{
+	background-color:#fff;
+	padding:0em 1em 2em 1em;
+	margin-bottom:2em;
+	float:left;
+}
+
+#menu-icon{
+	color:#8cdd71;
+	font-size:1.7em;
+	position:absolute;
+	right:0.5em;
+	top:0.4em;
+	text-decoration:none;
+	border:1px #8cdd71 solid;
+	padding:1px 4px;
+	-webkit-border-radius: 4px; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
+	border-radius: 4px; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+}
+
+h1, .title_white, .title{
+    font-weight: bold; 
+    font-style: normal;
+	font-size:2.7em;
+	font-family: 'Medula One', helvetica, arial,sans-serif; 
+	color:#222;
+
+}
+
+h1:after, .title_white:after, .title:after{
+
+	content: "\01F342"; 
+	font-family:'entypo';
+	color:#397f34;
+	font-size:1.2em;
+	padding:10px;
+}
+#main h1, #main h2{
+	margin:0.3em 0 0.7em 0;
+}
+
+h2{
+	font-weight: normal;
+    font-style: normal;
+	font-size:1.8em;
+
+}
+
+a{
+	color:#000;
+	text-decoration:none;
+}
+
+a:hover{
+	color:#397f34;
+
+}
+
+#main a{
+ 	border-bottom:dotted 1px #8cdd71;
+}
+
+#main a:after{
+	content: "\02192"; 
+	font-family:'entypo';
+	color:#397f34;
+	font-size:1.2em;
+	padding:0 0 0 0.3em;
+}
+
+table{
+	width:100%;
+}
+td{
+	padding:5px;
+}
+
+@media screen and (min-width: 22em) {
+
+	body{
+		margin:0em;
+		font-size: 1.2em;
+	}
+	
+	header h1{
+		background: url("../images/logo_169x60.png") left 0px no-repeat;
+		height:65px;
+		text-indent: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+		
+	}
+	
+}
+
+@media screen and (min-width: 40em) {
+	
+	body{
+	    font-size: 1em;
+		margin:0 1em;
+	}
+	
+	header h1{
+		background: url("../images/logo_80x224.png") center 5px no-repeat;
+		height:85px;
+		padding-bottom:1em;
+	}
+	
+	nav ul.links{
+		height:2em;
+		margin:0;
+		padding:.8em 0 0 1em;
+	}
+	
+	nav li.links{
+		float:left;
+		margin:0 .5em;
+		padding:0;
+		border-bottom:0;
+		width:auto;
+	}
+	
+	nav {
+		
+		float:left;
+		background: -moz-linear-gradient(top, #8cdd71 0%, #397f34 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8cdd71), color-stop(100%,#397f34)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, #8cdd71 0%,#397f34 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top, #8cdd71 0%,#397f34 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top, #8cdd71 0%,#397f34 100%); /* IE10+ */
+		background: linear-gradient(to bottom, #8cdd71 0%,#397f34 100%); /* W3C */
+		
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8cdd71', endColorstr='#397f34',GradientType=0 ); /* IE6-9 */
+		-webkit-border-top-left-radius: 12px; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
+		-webkit-border-top-right-radius: 12px; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
+	    border-top-left-radius: 12px; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+	    border-top-right-radius: 12px; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */	
+
+	}
+	
+	div#main{
+
+		-webkit-border-bottom-left-radius: 12px; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
+		-webkit-border-bottom-right-radius: 12px; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
+	    border-bottom-left-radius: 12px; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+	    border-bottom-right-radius: 12px; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+	}
+	
+	section.content,
+	section.supporting-content
+	{
+		width:98%;
+		padding:1%;
+		float:left;
+	}
+	
+	#menu-icon{
+		display:none;
+	}
+
+}
+
+@media screen and (min-width: 55em) {
+   body {
+      max-width: 53em;
+	  margin:0 auto;
+   }
+
+	nav{
+		top:10em;
+	}
+		
+	header h1{
+		background: url("../images/logo.png") top center no-repeat;
+		height:150px;
+	}
+	
+	section.content{
+		width:58%;
+		float:left;
+	}
+	
+	section.supporting-content{
+		width:38%;
+		float:left;
+	}
+	
+}
