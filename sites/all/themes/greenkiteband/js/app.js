@@ -12,4 +12,4 @@ requirejs.config({
 });
 
 // Start the main app logic.
-requirejs(['app/menu']);
+requirejs(['app/fitvids']);

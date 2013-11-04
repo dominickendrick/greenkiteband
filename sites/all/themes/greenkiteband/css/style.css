@@ -36,19 +36,10 @@ footer, header, hgroup, menu, nav, section {
 todo:
 jasmine tests
 amd
-less/sass
+less
 images
-drupal integration
 
 */
-
-@font-face {
-  font-family: 'entypo';
-  font-style: normal;
-  font-weight: 400;
-  src: local('entypo'), url("../font/entypo.woff") format('woff');
-}
-
 
 body {
 	line-height: 1;
@@ -83,6 +74,8 @@ p{
 	font-size:12px; font-size:0.9rem;
 	padding:0.5em 0em 0.5em 0em;
 }
+
+
 nav {
 	width:100%;
 	background: #8cdd71;
@@ -101,8 +94,6 @@ nav li.links{
 	float:left;
 }
 
-
-
 nav li a{
 	color:#fff;
 	text-decoration:none;
@@ -113,6 +104,23 @@ nav li a{
 
 ul.links li {
   padding:auto;
+  margin: 0;
+  float: left;
+}
+
+ul.secondary li {
+  display: inline;
+  padding: 0 1em;
+  border-right: 1px solid #ccc;
+}
+
+ul.primary li {
+display: inline;
+}
+
+ul.primary-links li a{
+display: block;
+margin: 0 0.6em;
 }
 
 div#main{
@@ -120,19 +128,6 @@ div#main{
 	padding:0em 1em 2em 1em;
 	margin-bottom:2em;
 	float:left;
-}
-
-#menu-icon{
-	color:#8cdd71;
-	font-size:1.7em;
-	position:absolute;
-	right:0.5em;
-	top:0.4em;
-	text-decoration:none;
-	border:1px #8cdd71 solid;
-	padding:1px 4px;
-	-webkit-border-radius: 4px; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
-	border-radius: 4px; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
 }
 
 h1, .title_white, .title{
@@ -144,28 +139,43 @@ h1, .title_white, .title{
 
 }
 
-h1:after, .title_white:after, .title:after{
-
-	content: "\01F342"; 
-	font-family:'entypo';
-	color:#397f34;
-	font-size:1.2em;
-	padding:10px;
+header h1:after{
+	content:"";
 }
-#main h1, #main h2{
+
+header h1{
+	background: url("../images/logo_169x60.png") left 0px no-repeat;
+	height:65px;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	
+}
+
+#main h1, #main h2, .views-field-title{
 	margin:0.3em 0 0.7em 0;
+	display:inherit;
 }
 
 h2{
-	font-weight: normal;
+	font-weight: bold;
     font-style: normal;
 	font-size:1.8em;
+	line-height: 1.4em;
+
+}
+
+h3{
+	font-weight: bold;
+    font-style: normal;
+	font-size:1.4em;
 
 }
 
 a{
 	color:#000;
 	text-decoration:none;
+	font-weight:bold;
 }
 
 a:hover{
@@ -173,16 +183,8 @@ a:hover{
 
 }
 
-#main a{
+#main a {
  	border-bottom:dotted 1px #8cdd71;
-}
-
-#main a:after{
-	content: "\02192"; 
-	font-family:'entypo';
-	color:#397f34;
-	font-size:1.2em;
-	padding:0 0 0 0.3em;
 }
 
 table{
@@ -192,29 +194,56 @@ td{
 	padding:5px;
 }
 
+	
+h1,h2{
+	text-align:center;
+}
+
+img{
+	max-width:100% !important;
+    height:auto;
+}
+
+ul.links li a{
+  display:inline-block;
+  margin:0.5em;
+}
+
+.clear-block{
+	display:inline-block;
+}
+
+.views-admin-links {
+	float:left;
+	width:100%;
+}
+
+
 @media screen and (min-width: 22em) {
 
 	body{
 		margin:0em;
 		font-size: 1.2em;
 	}
-	
-	header h1{
-		background: url("../images/logo_169x60.png") left 0px no-repeat;
-		height:65px;
-		text-indent: 100%;
-		white-space: nowrap;
-		overflow: hidden;
-		
-	}
-	
+
 }
 
-@media screen and (min-width: 40em) {
+
+@media screen and (min-width: 45em) {
 	
 	body{
 	    font-size: 1em;
 		margin:0 1em;
+	}
+	
+	ul.links li a{
+		display:auto;
+		margin: 0 0.6em;
+	}
+	
+	h1,h2{
+		text-align:left;
+		margin-left:0;
 	}
 	
 	header h1{
@@ -275,12 +304,16 @@ td{
 		display:none;
 	}
 
+	img{
+		max-width:100% !important;
+    }
 }
 
 @media screen and (min-width: 55em) {
    body {
       max-width: 53em;
 	  margin:0 auto;
+	  background: #000 url("../images/background.jpg") no-repeat center -100px;
    }
 
 	nav{
@@ -302,4 +335,19 @@ td{
 		float:left;
 	}
 	
+	img{
+		margin:0;
+	}
+	
+}
+
+@media 
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-moz-min-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) { 
+
 }

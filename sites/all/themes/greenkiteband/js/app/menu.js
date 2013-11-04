@@ -12,7 +12,7 @@ define(['jquery','enquire','polyfil'], function ( $ , enquire, polyfil ) {
 			//move nav in the DOM
 			nav.insertBefore(main);
 
-			enquire.register("screen and (min-width: 40em)",{
+			enquire.register("screen and (min-width: 42em)",{
 		
 				match : function(){
 					nav.show();	

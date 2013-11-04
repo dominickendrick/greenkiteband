@@ -8,16 +8,13 @@
   
 
   <meta name="description" content="Great Ceilidh band from London, playing tradtional english, irish, scottish, jewish and american tunes for your dancing pleasure. We play weddings, birthdays and other special events at competative prices">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
 
   <link rel="shortcut icon" href="favicon.ico" />
   <!--[if IE]>
         <link href="/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
     <![endif]-->
     
-    <?php print $head; ?>
-    <?php print $styles; ?>
-    <?php print $scripts; ?>
 
     <link href="sites/all/themes/greenkiteband/css/style.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Medula+One' rel='stylesheet' type='text/css'>
@@ -31,9 +28,11 @@
    </script>
    
      <script data-main="sites/all/themes/greenkiteband/js/app" src="sites/all/themes/greenkiteband/js/lib/require.js"></script>
-
-
- 
+     
+    <?php if(user_is_logged_in()): ?>
+         <script type="text/javascript" defer="defer" src="sites/all/modules/admin_menu/admin_menu.js?a"></script>
+         <link type="text/css" rel="stylesheet" media="all" href="sites/all/modules/admin_menu/admin_menu.css?a">
+    <?php endif;?>
 </head>
   
 <body>
@@ -42,7 +41,13 @@
       <h1>Green Kite Ceilidh band</h1>
       <a id="menu-icon" href="#nav">&#9776;</a>
   </header>
-  
+  <nav id="main_nav">
+
+      <?php if (isset($primary_links)) : ?>
+         <?php print theme('links', $primary_links, array('class' => 'links primary-links')) ?>
+       <?php endif; ?>
+
+   </nav>
   <div id="main" role="main">
        <?php if ($tabs): ?><div class="tabs"><?php print $tabs; ?></div><?php endif; ?>
        <section class="content">
@@ -69,19 +74,7 @@
        
    </div>
  
- <nav id="main_nav">
-      <script>
-        var nav = document.getElementById('main_nav');
-        nav.style.display = "none";
-      </script>
-      <a name="nav" onclick="return false;"></a>
-        
-     <?php if (isset($primary_links)) : ?>
-        <?php print theme('links', $primary_links, array('class' => 'links primary-links')) ?>
-      <?php endif; ?>
-
-  
-  </nav>
+  <?php print $closure; ?>
   <div id="footer-wrapper" >
     <div id="footer">
       <?php print $footer; ?>
